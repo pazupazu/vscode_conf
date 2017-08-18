@@ -1,0 +1,50 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+  "editor.fontSize": 12,
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "vscode-great-icons",
+  "eslint.enable": true,
+  "eslint.options": {
+      "extensions": [
+        ".js",
+        ".vue"
+      ]
+    },
+  // vueにcssのemmet追加
+  "emmet.syntaxProfiles": {
+    "vue": "css, html"
+  },
+
+  // // ESlint extension
+  // "javascript.validate.enable": false,
+  // /*
+  //  Html, JavaScript, Vue
+  // */
+  // "files.associations": {
+  //   "*.vue": "vue"
+  // },
+  
+  // // vueだけで追加したい設定
+  // // "[vue]": {
+  // //   "editor.formatOnSave": true
+  // // },
+  // "eslint.enable": true,
+  // // 適応するファイルタイプを決定
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   {
+  //     "language": "vue",
+  //     "autoFix": true
+  //   }
+  // ],
+  // // プロジェクト配下のeslintrc.jsを読み込み
+  // "eslint.options": {
+  //   "configFile": ".eslintrc.js"
+  // },
+  // "window.zoomLevel": 0,
+
+  // 時間設定
+  "clock.dateFormat": "yyyy-mm-dd HH:MM",
+  "window.zoomLevel": 0
+}

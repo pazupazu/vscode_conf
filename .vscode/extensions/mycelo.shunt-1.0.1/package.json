@@ -1,0 +1,95 @@
+{
+	"name": "shunt",
+	"displayName": "shunt",
+	"description": "Extension for line selection and multi-cursor tricks",
+	"version": "1.0.1",
+	"publisher": "mycelo",
+	"icon": "images/shunt.png",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mycelo1/vsc-shunt/issues"
+	},
+	"homepage": "https://github.com/mycelo1/vsc-shunt",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mycelo1/vsc-shunt"
+	},
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.shunt_left",
+		"onCommand:extension.shunt_right",
+		"onCommand:extension.shunt_select"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.shunt_left",
+				"title": "Shunt Left"
+			},
+			{
+				"command": "extension.shunt_right",
+				"title": "Shunt Right"
+			},
+			{
+				"command": "extension.shunt_select",
+				"title": "Shunt Select"
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+alt+o",
+				"command": "extension.shunt_left",
+				"when": "editorHasSelection && editorTextFocus"
+			},
+			{
+				"key": "ctrl+alt+p",
+				"command": "extension.shunt_right",
+				"when": "editorHasSelection && editorTextFocus"
+			},
+			{
+				"key": "ctrl+alt+k",
+				"command": "extension.shunt_select",
+				"when": "editorHasSelection && editorTextFocus"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.shunt_left",
+					"group": "8_shunt",
+					"when": "editorHasSelection && editorTextFocus"
+				},
+				{
+					"command": "extension.shunt_right",
+					"group": "8_shunt",
+					"when": "editorHasSelection && editorTextFocus"
+				},
+				{
+					"command": "extension.shunt_select",
+					"group": "8_shunt",
+					"when": "editorHasSelection && editorTextFocus"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "70dbbf62-0572-4529-9c5d-f2f4ce564a5e",
+		"publisherId": "15ffea8f-dccb-4b1c-9236-c67d2aef7913",
+		"publisherDisplayName": "mycelo"
+	}
+}
